@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="index">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="register"
+			class="com.Lithan.Mini2.RegistrationAction">
+			<result name="success">/thankyou.jsp</result>
+		</action>
+
+		<action name="login" class="com.Lithan.Mini2.LoginAction">
+			<result name="success">/home.jsp</result>
+
+		</action>
+
+
+		<action name="view" class="com.Lithan.Mini2.View">
+			<result name="REPORT">/view.jsp</result>
+			<result name="Failure">/home.jsp</result>
+		</action>
+
+		<action name="updatedetails" class="com.Lithan.Mini2.View">
+			<result name="REPORT">/update.jsp</result>
+		</action>
+
+		<action name="update" class="com.Lithan.Mini2.UpdateAction">
+			<result name="update" type="chain">view</result>
+		</action>
+
+		<action name="view" class="com.Lithan.Mini2.View">
+			<result name="REPORT">/view.jsp</result>
+		</action>
+
+		<action name="logout" class="com.Lithan.Mini2.LoginAction"
+			method="logout">
+			<result name="logout">/login.jsp</result>
+		</action>
+
+		<action name="reset_password"
+			class="com.Lithan.Mini2.MailAction">
+			<result name="success">/emailmessage.jsp</result>
+		</action>
+
+		<action name="adminLogin" class="com.Lithan.Mini2.AdminLogin">
+			<result name="success">/adminHome.jsp</result>
+		</action>
+
+		<action name="viewUsers" class="com.Lithan.Mini2.AdminSelectAction">
+			<result name="success">/adminview.jsp</result>
+		</action>
+		
+		<action name="deleteUser" class="com.Lithan.Mini2.AdminDeleteAction">
+			<result name="success" type="chain">adminview</result>
+		</action>
+		
+		<action name="adminview" class="com.Lithan.Mini2.AdminSelectAction">
+			<result name="success">adminview.jsp</result>
+		</action>
+       
+       <action name="search"  class="com.Lithan.Mini2.SearchAction">
+         <result name="success">/listedusers.jsp</result>
+         </action>
+         
+         <action name="FullProfile" class="com.Lithan.Mini2.SearchFull">
+           <result name="SearchFullSuccess">/SearchFullProfile.jsp</result>
+           <result name="error">/listedusers.jsp</result>
+         </action>
+         
+	</package>
+</struts>
