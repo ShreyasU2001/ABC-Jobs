@@ -6,7 +6,7 @@
 ![image](https://user-images.githubusercontent.com/55836478/134784913-86788a3b-e4ba-4b7b-8158-92d83dddcb6a.png)
 
 #### Registration page
-![image](https://user-images.githubusercontent.com/55836478/134784940-05cdecbd-d005-43a0-810c-bb99546282d4.png)
+![image](https://user-images.githubusercontent.com/55836478/134785073-47ec91e7-b94f-446b-b940-3e257dd5313f.png)
 
 #### Login Page
 ![image](https://user-images.githubusercontent.com/55836478/134784952-b1d95b94-8012-4d5e-85bd-37b17befb560.png)
